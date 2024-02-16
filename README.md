@@ -8,16 +8,12 @@
 
 Renovate configuration for our projects
 
-## Installation
-
-    npm i --save-dev --save-exact @bifravst/renovate-config
-
 ## Usage
 
-Add to `package.json`:
+Add a file named `renovate.json` to your project, with this contents
 
 ```json
 {
-  "prettier": "@bifravst/renovate-config"
+  "extends": ["github>bifravst/renovate-config"]
 }
 ```
