@@ -1,0 +1,53 @@
+{
+  "name": "@bifravst/renovate-config",
+  "version": "0.0.0-development",
+  "description": "Prettier config for our projects",
+  "type": "module",
+  "main": "prettierrc.json",
+  "repository": "git@github.com:bifravst/renovate-config.git",
+  "author": "Nordic Semiconductor ASA | nordicsemi.no",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@bifravst/prettier-config": "1.0.0",
+    "@commitlint/config-conventional": "18.6.2",
+    "commitlint": "18.6.1",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.2",
+    "prettier": "3.2.5",
+    "renovate": "37.192.2"
+  },
+  "engines": {
+    "node": ">=20",
+    "npm": ">=9"
+  },
+  "scripts": {
+    "prepare": "husky"
+  },
+  "prettier": "@bifravst/prettier-config",
+  "lint-staged": {
+    "*.{yml,md,js,json}": [
+      "prettier --write"
+    ]
+  },
+  "release": {
+    "branches": [
+      "saga",
+      {
+        "name": "!(saga|v[0-9].[0-9].x|*_*|*/*)",
+        "prerelease": true
+      }
+    ],
+    "remoteTags": true,
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/github",
+        {
+          "successComment": false,
+          "failTitle": false
+        }
+      ]
+    ]
+  }
+}
