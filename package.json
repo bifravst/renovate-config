@@ -10,9 +10,11 @@
   "devDependencies": {
     "@bifravst/prettier-config": "1.0.4",
     "@commitlint/config-conventional": "19.2.2",
+    "cat": "*",
     "commitlint": "19.3.0",
     "husky": "9.0.11",
     "lint-staged": "15.2.7",
+    "package.json": "*",
     "prettier": "3.3.3",
     "renovate": "37.431.4"
   },
@@ -45,5 +47,9 @@
         }
       ]
     ]
+  },
+  "peerDependencies": {
+    "cat": "^0.2.0",
+    "package.json": "^2.0.1"
   }
 }
