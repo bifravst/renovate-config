@@ -14,7 +14,7 @@
     "husky": "9.1.4",
     "lint-staged": "15.2.7",
     "prettier": "3.3.3",
-    "renovate": "38.18.5"
+    "renovate": "38.18.8"
   },
   "engines": {
     "node": ">=20",
