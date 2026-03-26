@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": ["config:base", "helpers:pinGitHubActionDigests"],
   "ignorePresets": [":prHourlyLimit2", ":prConcurrentLimit20"],
   "labels": ["help wanted", "dependencies"],
   "minimumReleaseAge": "3 days",
