@@ -10,9 +10,12 @@
       "matchDepTypes": [
         "dependencies",
         "devDependencies",
-        "optionalDependencies",
-        "peerDependencies"
+        "optionalDependencies"
       ]
+    },
+    {
+      "rangeStrategy": "widen",
+      "matchDepTypes": ["peerDependencies"]
     },
     {
       "matchUpdateTypes": ["minor", "pin", "digest"],
