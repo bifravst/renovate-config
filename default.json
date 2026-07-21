@@ -41,6 +41,11 @@
     {
       "matchPackagePatterns": ["@bifravst/*"],
       "minimumReleaseAge": null
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
     }
   ]
 }
